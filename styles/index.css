@@ -1,0 +1,242 @@
+body{
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+    height: 98vh;
+}
+
+.main{
+    width: 600px;
+    height: 670px;
+    border: solid 1px black;
+}
+
+header{
+    background-image: url("/images/header.png");
+    width: 600px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+}
+
+#title{
+    margin-left: 26px;
+    margin-top: 25px;
+    color: #FFFFFF;
+    font-family: "Smythe", system-ui;
+    font-size: 39px;
+    line-height: 39px;
+    letter-spacing: 2px;
+}
+
+#description{
+    color: #FFFFFF;
+    font-family: "Smythe", system-ui;
+    font-size: 20px;
+    margin-left: 30px;
+    line-height: 29px;
+    letter-spacing: 2px;
+    
+}
+
+.menu{
+    /* border: solid 2px red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 260px ;
+    overflow-y: scroll;
+}
+
+.itemsmain{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    border-bottom: #d2d2d2 solid 2px;
+    padding: 10px;
+}
+
+.itemimg{
+    width: 70px;
+    height: 89px;
+}
+
+.item-description{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* border: green solid 2px; */
+}
+
+.food, .toppings, .price{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 15px;
+    font-family: "Smythe";
+}
+
+.food{
+    font-size: 28px;
+}
+
+.toppings{
+    font-size: 16px;
+    color: #8B8B8B;
+}
+
+.price{
+    font-size: 20px;
+}
+
+
+.items{
+    display: column;
+    flex-direction: row;
+    width:500px;
+}
+
+.addbtn{
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    font-size: 22px;
+    text-align: center;
+    
+}
+
+#carttitle{
+    text-align: center;
+    font-size: 28px;
+    font-family: "Smythe";
+    margin-top: 10px
+}
+
+.itemsincart{
+    height: 130px;
+    margin-top: -30px;
+}
+
+.itemcart{
+    height: 40px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0px;
+    margin-left: 60px;
+    justify-content: center;
+
+}
+
+.total{
+    margin-top: 6px;
+    /* border: lightcyan 2px solid; */
+    display: flex;
+}
+
+.remove{
+    background-color: transparent;
+    border: none;
+    font-family: "Verdana";
+    font-size:12px;
+    letter-spacing: 0.5px;
+    color: #BBBBBB; 
+    margin-left: 5px;
+}
+
+.foodincart, .totaltitle{
+    font-size: 28px;
+    font-family:"Smythe" ;
+}
+.totalprice, .priceincart{
+    margin-left: auto;
+    margin-right: 70px;
+    font-family: "Smythe";
+    font-size: 22px;
+}
+
+.totaltitle{
+    padding: 0;
+    margin-left: 60px;
+}
+
+.seperation{
+    color:#BBBBBB;
+    margin-left: 40px;
+    margin-right: 50px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    
+}
+
+#completeorder{
+    margin-top: 20px;
+    margin-left: 60px;
+    width:470px;
+    height: 40px;
+    background-color: #16DB99;
+    border: none;
+    border-radius: 3px;
+    font-family: "Verdana";
+    font-weight: bold; 
+    color: #FFFFFF;
+    font-size: 16px;
+}
+
+.present{
+    display: none;
+}
+
+form{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    top: 350px;
+    left: 200px;
+    width: 200px;
+    height: 300px;
+    padding:20px;
+    background-color: rgb(208, 223, 223);
+    border-radius: 5px;
+    font-family: "Verdana";
+    font-size: 12px;
+
+}
+
+input{
+    border-radius: 3.5px;
+    border: 1.3px solid #757575;
+    padding: 10px;
+}
+
+#submitbtn{
+    margin-top: 10px;
+    background-color: #16DB99;
+    border: none;
+    border-radius: 3px;
+    font-family: "Verdana";
+    font-weight: bold; 
+    color: #FFFFFF;
+    font-size: 18px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.ordershipped{
+    position: absolute;
+    top: 580px;
+    left: 340px;
+    width: 504px;
+    height: 120px;
+    background-color:#ECFDF5 ;
+}
+
+#orderdetails{
+    text-align: center;
+    font-family: "Smythe";
+    font-size: 32px;
+    font-weight: 200px;
+
+}
