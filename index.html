@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="styles/index.css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Smythe&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <container class="main">
+
+            <header>
+                <div id="title"> Chef's Diner </div>
+                <div id="description"> The best burgers and pizzas in town.</div>
+            </header>
+
+            <div class="menu">
+                        <div class="items">
+                            <div class="itemsmain">
+                                <image class="itemimg" src="images/pizza.png"></image>
+                                <div class="item-description">
+                                    <p class="food"> Pizza </p>
+                                    <p class="toppings"> Toppings </p>
+                                    <p class="price"> $14 </p>
+                                </div>
+                                <button class="addbtn"> + </button>
+                            </div>
+                        </div>
+        
+                        <div class="items">
+                            <div class="itemsmain">
+                                <image class="itemimg" src="images/burger.png"></image>
+                                    <div class="item-description">
+                                        <p class="food"> Burger </p>
+                                        <p class="toppings"> Toppings </p>
+                                        <p class="price"> $18 </p>
+                                    </div>
+                                    <button class="addbtn"> + </button>
+                            </div>
+                        </div>
+
+                        <div class="items">
+                            <div class="itemsmain">
+                                <image class="itemimg" src="images/beer.png"></image>
+                                    <div class="item-description">
+                                        <p class="food"> Beer </p>
+                                        <p class="toppings"> Toppings </p>
+                                        <p class="price"> $10 </p>
+                                    </div>
+                                    <button class="addbtn"> + </button>
+                            </div>
+                        </div>
+                    
+            </div>
+
+        <div class="Cart">
+            <p id="carttitle"> Your Order</p>
+                <div class="itemsincart">
+                    <div class="itemcart">  
+                        <p class="foodincart"> Pizza </p>
+                        <button class ="remove"> remove</button>
+                        <p class="priceincart">$14</p>
+                    </div>
+
+                    <div class="itemcart">  
+                        <p class="foodincart"> Burger </p>
+                        <button class ="remove"> remove</button>
+                        <p class="priceincart">$18</p>
+                    </div>
+
+                    <div class="itemcart">  
+                        <p class="foodincart"> Beer </p>
+                        <button class="remove"> remove</button>
+                        <p class="priceincart">$10</p>
+                    </div>
+                </div>
+        </div>
+
+        <hr class = "seperation">
+
+        <div class="total">
+            <div class="totaltitle"> Total price: </div>    
+            <div class="totalprice"> $25 </div>
+        </div>
+
+        <button id="completeorder"> Complete order </button>
+
+        <div class="ordershipped present"><p id="orderdetails">Thanks, VISHVAM Your order is on its way!</p> </div>
+        <form class="present">
+            <h3> Enter card details</h3>
+            <label for="name"> Full Name</label>
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+                required
+            >
+            <label for="cardnumber"> Card Number</label>
+            <input
+                type="number"
+                id="cardnumber"
+                name="cardnumber"
+                placeholder="Enter your cardnumber"
+                required
+            >
+            <label for="cvv"> CVV</label>
+            <input
+                type="text"
+                id="cvv"
+                name="cvv"
+                placeholder="Enter CVV"
+                required
+            >
+            <button id="submitbtn"> Pay </button>
+        </form>
+
+        </container>
+    </body>
+</html>
+
