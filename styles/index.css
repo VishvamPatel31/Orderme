@@ -39,7 +39,7 @@ header{
     
 }
 
-.menu{
+#menu{
     /* border: solid 2px red; */
     display: flex;
     flex-direction: column;
@@ -97,14 +97,22 @@ header{
 
 .addbtn{
     margin-left: auto;
-    margin-top: auto;
-    margin-bottom: auto;
+    font-size: 22px;
+}
+
+.subtractbtn{
+    margin-left: 10px;
+    font-size: 21px;
+}
+
+.subtractbtn, .addbtn{
     height: 30px;
     width: 30px;
     border-radius: 50%;
-    font-size: 22px;
+ 
     text-align: center;
-    
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 #carttitle{
@@ -114,9 +122,10 @@ header{
     margin-top: 10px
 }
 
-.itemsincart{
+#itemsincart{
     height: 130px;
     margin-top: -30px;
+    overflow-y: scroll;
 }
 
 .itemcart{
@@ -129,7 +138,7 @@ header{
 
 }
 
-.total{
+.totalincart{
     margin-top: 6px;
     /* border: lightcyan 2px solid; */
     display: flex;
@@ -149,9 +158,16 @@ header{
     font-size: 28px;
     font-family:"Smythe" ;
 }
-.totalprice, .priceincart{
+.priceincart{
     margin-left: auto;
-    margin-right: 70px;
+    margin-right: 57px;
+    font-family: "Smythe";
+    font-size: 22px;
+}
+
+.totalprice{
+    margin-left: auto;
+    margin-right: 72px;
     font-family: "Smythe";
     font-size: 22px;
 }
@@ -170,7 +186,7 @@ header{
     
 }
 
-#completeorder{
+.completeorder{
     margin-top: 20px;
     margin-left: 60px;
     width:470px;
@@ -185,24 +201,29 @@ header{
 }
 
 .present{
-    display: none;
+    display: none; 
 }
 
-form{
-    position: absolute;
+form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    top: 350px;
-    left: 200px;
-    width: 200px;
-    height: 300px;
-    padding:20px;
+
+    width: 300px;
+    height: 330px;
+    padding: 20px;
+
     background-color: rgb(208, 223, 223);
     border-radius: 5px;
     font-family: "Verdana";
     font-size: 12px;
-
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
 }
 
 input{
@@ -224,19 +245,148 @@ input{
     padding-bottom: 10px;
 }
 
-.ordershipped{
-    position: absolute;
-    top: 580px;
-    left: 340px;
-    width: 504px;
-    height: 120px;
-    background-color:#ECFDF5 ;
+.ordershipped {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 20px;
+    padding: 20px;
+    width: 93%;
+    background-color: #ECFDF5;
+
+    font-family: "Smythe";
+    font-size: 32px;
+    text-align: center;
+    border-radius: 8px;
 }
+
 
 #orderdetails{
     text-align: center;
     font-family: "Smythe";
     font-size: 32px;
     font-weight: 200px;
+}
 
+#closebtn {
+    align-self: flex-end;
+    background: none;
+    border: none;
+    font-size: 22px;
+    color: red;
+    cursor: pointer;
+}
+
+/* Smooth scroll for menu/cart areas */
+#menu::-webkit-scrollbar,
+#itemsincart::-webkit-scrollbar {
+    width: 6px;
+}
+
+#menu::-webkit-scrollbar-thumb,
+#itemsincart::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 3px;
+}
+
+/* Improve scroll feel */
+#menu, #itemsincart {
+    scroll-behavior: smooth;
+}
+
+/* Button hover effects */
+.addbtn:hover,
+.subtractbtn:hover,
+#submitbtn:hover,
+.completeorder:hover {
+    background-color: #13c68a;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+/* Visually separate items in cart */
+.itemcart {
+    background-color: #f9f9f9;
+    padding: 8px;
+    margin: 5px 20px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+/* Improve item card look */
+.itemsmain {
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    transition: box-shadow 0.2s ease;
+}
+
+.itemsmain:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Better spacing between cart total and button */
+.totalincart {
+    align-items: center;
+    justify-content: space-between;
+    margin: 15px 60px 0 60px;
+}
+
+/* Visually enhance main container */
+.main {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.05);
+    overflow: hidden;
+}
+
+/* Highlight the form better */
+form {
+    border: 1.5px solid #ccc;
+    animation: fadeIn 0.25s ease-in-out;
+}
+
+/* Add a simple fade animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Mobile-friendly responsiveness */
+@media screen and (max-width: 640px) {
+    .main {
+        width: 95%;
+        height: auto;
+    }
+
+    .completeorder {
+        width: 85%;
+        margin: 20px auto;
+    }
+
+    form {
+        width: 90%;
+    }
+
+    .ordershipped {
+        font-size: 24px;
+    }
+}
+
+#neworderbtn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #16DB99;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-family: "Verdana";
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#neworderbtn:hover {
+    background-color: #13c68a;
 }
